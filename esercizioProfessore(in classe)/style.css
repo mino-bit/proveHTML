@@ -27,3 +27,7 @@ p>* {
     color:green
 }
 /*capisci bene la specificità, in caso di parità di valore vince la specificità più recente*/
+
+a:hoover{
+    color: lightblue
+}

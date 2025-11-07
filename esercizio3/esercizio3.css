@@ -1,0 +1,55 @@
+span {
+    color:red;
+}
+p span{
+    color:blue;
+}
+
+div#sezione-1 > p.classe-1 > span.classe-1{
+    color:green;
+}
+.sezione-2 > p.classe-1 {
+    color:purple;
+}
+
+a:hover {
+    color: lightblue;
+}
+div#sezione-1 > p.classe-2:hover{
+    color: pink
+}
+.sezione-2 > p:not(.classe-1){
+    color:orange
+}
+
+.sezione-2 > p:first-child{/*la regola non è il primo figlio del tipo specificato a cambiare colore, ma prende efetti
+    vamente il primo figlio del tipo che viene specificato se non è di quel tipo non funziona nulla */
+    color:orange
+    /*questo è uguale a quello precedente fanno la stessa cosa*/
+}
+
+.sezione-2 > p:nth-child(1){/*questo mi permette di specificare i figli senza dire il primo o l'ultimo, in questo modo posso prendere 
+    anche il 2/3/4... figlio*/
+    color:orange
+  
+}
+.sezione-2 > p:nth-child(2n){/*per esempio in caso voglio i figli pari scrivo questo*/
+    color:orange 
+}
+.sezione-2 > p:nth-child(2n + 1){/*per esempio in caso voglio i figli dispari scrivo questo*/
+    color:orange 
+}
+.sezione-2 > p:nth-child(3n){/*per esempio in caso prendo i figli ogni 3*/
+    color:orange 
+}
+ul.classe-2 > li:nth-child(2n + 1){
+    color: green
+}
+ul.classe-2 > li:nth-child(2n){
+    color: red
+}
+ul.classe-2 > li:nth-child(1){/*questo mi permette di specificare i figli senza dire il primo o l'ultimo, in questo modo posso prendere 
+    anche il 2/3/4... figlio*/
+    color:yellow
+  
+}
