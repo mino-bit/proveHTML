@@ -1,6 +1,8 @@
 <html>
 	<head>
 	<title> titolo </title>
+	<meta charset="utf-8"> mi permette di impostare la codifica del documento a utf-8
+	<meta name="viewport" content="width=device-width, initial-scale=1"/> mi permette di rendere responsiveness ossia riesce a rendere adattivo ai dispositivi che utilizzano il sito web
 	</head>
 	<body>
 		<header>
@@ -24,3 +26,5 @@
 			<footer></footer>
 			</body>
 			</html>
+			i metatag non vengono mostrati tranne il metadescription
+			metadescription viene mostrata sul browser sotto al titolo cliccabile 

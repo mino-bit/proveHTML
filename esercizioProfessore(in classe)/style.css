@@ -1,0 +1,29 @@
+/*tutti i paragrafi (che apro con p)colorati di blu*/
+p{
+    color:blue;
+}
+/**/
+/*tutti gli elementi che hanno la classe "testo-rosso"*/
+.testo-rosso{
+    color:red;
+}
+/*l'elemento con id "sezione-2" scavalca testo rosso perche ha #*/
+#sezione-2{
+    color: purple;
+}
+/*tutti gli elementi di tipo a che hanno la classe "testo-rosso"*/
+a.testo-rosso{
+    color:brawn
+}
+/*tutti gli elementi di tipo a che hanno le classi "testo-rosso" e "testo-marrone"*/
+a.testo-rosso.testo-marrone{
+    color:darkred
+}
+/*tutti gli elementi di tipo a racchiusi dentro un elemento con classe testo-principale"*/
+.testo-principale a {
+color:yellow
+}
+p>* {
+    color:green
+}
+/*capisci bene la specificità, in caso di parità di valore vince la specificità più recente*/
