@@ -1,0 +1,134 @@
+/* style.css */
+
+body {
+    background-color: #000000;
+    font-family: 'SF Pro Display', 'Helvetica Neue', 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column; /* Cambiato a colonna per impilare titolo e calcolatrice */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+/* NUOVO STILE PER IL TITOLO */
+#calculator-title {
+    color: #FFFFFF;
+    font-size: 32px; /* Grande e visibile */
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: center;
+    width: 480px; 
+    max-width: 90vw;
+}
+
+#calculator-container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    width: 480px; /* LARGHEZZA AUMENTATA */
+    max-width: 90vw;
+}
+
+#display-area {
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#history {
+    font-size: 20px;
+    color: #A0A0A0;
+    min-height: 25px;
+    margin-bottom: 5px;
+}
+
+#display {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 56px; /* Aumentato per lo schermo più grande */
+    padding: 10px 0;
+    text-align: right;
+    outline: none;
+    caret-color: transparent;
+}
+
+#buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 10px; /* Spaziatura leggermente aumentata */
+}
+
+button {
+    height: 60px; /* ALTEZZA AUMENTATA per coerenza con la nuova larghezza */
+    border: none;
+    border-radius: 10px; 
+    font-size: 18px; 
+    cursor: pointer;
+    background-color: #333333;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Colori specifici per tipo di bottone */
+.number-btn {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.operator-btn {
+    background-color: #FF9500; /* Arancione */
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.clear-btn {
+    background-color: #A0A0A0; /* Grigio chiaro */
+    color: #000000;
+    font-weight: bold;
+    grid-column: span 1;
+}
+
+.mode-btn {
+    grid-column: span 1;
+    background-color: #A0A0A0;
+    color: #000000;
+}
+
+.extra-btn {
+    background: none;
+    pointer-events: none;
+}
+
+.function-btn {
+    background-color: #222222;
+    color: #E0E0E0;
+    font-size: 16px; /* Font leggermente più grande per i tasti funzione */
+}
+
+.equal-btn {
+    background-color: #007AFF; /* Blu */
+    color: #FFFFFF;
+    font-weight: bold;
+    grid-column: span 2;
+}
+
+
+/* Effetti al click */
+button:active {
+    filter: brightness(120%);
+    transform: scale(0.98);
+}
+
+/* Regola la griglia per assicurare che tutti i bottoni non-span occupino 1 colonna */
+.number-btn, .operator-btn, .function-btn, .mode-btn, .extra-btn {
+    grid-column: span 1;
+}
